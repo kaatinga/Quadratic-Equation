@@ -6,6 +6,8 @@ import (
 	"strings"
 )
 
+const less0 = "There are no roots"
+
 func Calc(a, b, c float64) (D, x1, x2 float64, conclusion string) {
 
 	// Discriminant
@@ -13,7 +15,7 @@ func Calc(a, b, c float64) (D, x1, x2 float64, conclusion string) {
 
 	switch {
 	case D < 0:
-		conclusion = "There are no roots"
+		conclusion = less0
 	case D == 0:
 		x1 = -b / 2 / a
 		x2 = x1
